@@ -233,6 +233,7 @@ export default defineConfig([
                     ["data/mp/multiplay/skirmish/nexus.js", "data/mp/multiplay/skirmish/nexus_includes/",
                         "data/mp/multiplay/skirmish/nexus_standards/"],
                     ["data/mp/multiplay/skirmish/bonecrusher/"],
+                    ["data/mp/multiplay/skirmish/wally.js", "data/mp/multiplay/skirmish/wally_includes/"],
                     ["data/mp/multiplay/script/rules/"],
                     ["data/base/script/campaign/"],
                 ],

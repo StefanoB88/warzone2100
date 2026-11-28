@@ -1,16 +1,16 @@
 // Maps structure.id -> assigned constructor droid.id (or null) for structures scheduled for demolition
 const structuresBeingDemolished = new Map();
 // Tracks whether capturable safe oil wells currently remain on the map so oilGrabbersGroup (Group B) helps at base once all safe oils are taken
-let hasFreeSafeOils = true;
+var hasFreeSafeOils = true;
 // Tracks whether defensesBuildersGroup (Group C) currently has safe forward defense work to do
-let groupCHasForwardWork = false;
+var groupCHasForwardWork = false;
 // Scoped Group A subgroup currently being dispatched inside buildTick()
-let activeBaseSubgroup = null;
+var activeBaseSubgroup = null;
 
 // Oil the army should help secure: a free oil well on our side of the map that armed enemies are sitting on ({x, y, time})
 var contestedOil;
 // Game time of the last pending-order cleanup, so the cleanup runs at most once per game tick
-let lastPendingCleanupTime = -1;
+var lastPendingCleanupTime = -1;
 // "stat@sector" -> game time until which we stop searching a build spot there after a failed search
 const placementBackoff = new Map();
 // "x_y" -> {t, ok}: whether any of our trucks can reach that oil well (refreshed every minute)
@@ -1162,8 +1162,8 @@ function buildDefenses() {
 }
 
 // Game time until which we already know that every safe derrick has its defenses (see findDerrickNeedingDefense)
-let derricksProtectedUntil = 0;
-let derricksProtectedFor = 0;
+var derricksProtectedUntil = 0;
+var derricksProtectedFor = 0;
 
 // Counts pending defense/sensor build orders already walking toward (x, y) so multiple lanes/subgroups don't double-claim a derrick
 function countPendingDefensesNear(x, y, range) {
